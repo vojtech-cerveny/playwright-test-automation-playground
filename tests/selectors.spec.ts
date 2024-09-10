@@ -44,7 +44,7 @@ test.describe("Selectors", () => {
         await expect(pages.selectorsPage.paragraph).toHaveCount(16)
     });
 
-    test.only("the counter displays the number corresponding to the number of clicks on the button Dej like!", async ({ page }) => {
+    test("the counter displays the number corresponding to the number of clicks on the button Dej like!", async ({ page }) => {
         await pages.selectorsPage.like.click({clickCount:4});
         await expect(pages.selectorsPage.likeCounter).toHaveText("4")
     });

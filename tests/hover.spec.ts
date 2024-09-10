@@ -26,8 +26,23 @@ test.describe("hover", () => {
     await pages.hoverPage.catCard.hover();
     await expect(pages.hoverPage.catCardText).toHaveText("A jaké krásné očička má!")
   });
+  test("when hover on dog card it shows right title", async ({ page }) => {
+    await pages.hoverPage.catCard.hover();
+    await expect(pages.hoverPage.catCardTitle).toHaveText("Pes")
+  });
+  test("when hover on dog card it shows right text", async ({ page }) => {
+    await pages.hoverPage.catCard.hover();
+    await expect(pages.hoverPage.catCardText).toHaveText("A jak je heboučký!")
+  });
 
-
+  test("when hover on unicorn card it shows right title", async ({ page }) => {
+    await pages.hoverPage.catCard.hover();
+    await expect(pages.hoverPage.catCardTitle).toHaveText("Jednorožec")
+  });
+  test("when hover on unicorn card it shows right text", async ({ page }) => {
+    await pages.hoverPage.catCard.hover();
+    await expect(pages.hoverPage.catCardText).toHaveText("A jak je husťácký!")
+  });
 
 
 
