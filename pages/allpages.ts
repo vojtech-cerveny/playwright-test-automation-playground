@@ -8,6 +8,7 @@ import { HoverPage} from "./hover";
 import { TablePage} from "./table";
 import { InputsPage} from "./inputs";
 import { ModalPage} from "./modal";
+import {LoadingPage} from "./loading";
 
 
 export class AllPages {
@@ -21,6 +22,7 @@ export class AllPages {
   readonly tablePage: TablePage;
   readonly inputsPage: InputsPage;
   readonly modalPage: ModalPage;
+  readonly loadingPage: LoadingPage;
 
   constructor(page: Page) {
     this.page = page;
@@ -33,6 +35,7 @@ export class AllPages {
     this.hoverPage = new HoverPage(page);
     this.inputsPage = new InputsPage(page);
     this.modalPage = new ModalPage(page);
+    this.loadingPage = new LoadingPage(page);
   }
 
   async visit(url: string) {

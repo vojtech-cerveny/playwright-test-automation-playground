@@ -27,21 +27,21 @@ test.describe("hover", () => {
     await expect(pages.hoverPage.catCardText).toHaveText("A jaké krásné očička má!")
   });
   test("when hover on dog card it shows right title", async ({ page }) => {
-    await pages.hoverPage.catCard.hover();
-    await expect(pages.hoverPage.catCardTitle).toHaveText("Pes")
+    await pages.hoverPage.dogCard.hover();
+    await expect(pages.hoverPage.dogCardTitle).toHaveText("Pes")
   });
   test("when hover on dog card it shows right text", async ({ page }) => {
-    await pages.hoverPage.catCard.hover();
-    await expect(pages.hoverPage.catCardText).toHaveText("A jak je heboučký!")
+    await pages.hoverPage.dogCard.hover();
+    await expect(pages.hoverPage.dogCardText).toHaveText("A jak je heboučký!")
   });
 
   test("when hover on unicorn card it shows right title", async ({ page }) => {
-    await pages.hoverPage.catCard.hover();
-    await expect(pages.hoverPage.catCardTitle).toHaveText("Jednorožec")
+    await pages.hoverPage.unicornCard.hover();
+    await expect(pages.hoverPage.unicornCardTitle).toHaveText("Jednorožec")
   });
   test("when hover on unicorn card it shows right text", async ({ page }) => {
-    await pages.hoverPage.catCard.hover();
-    await expect(pages.hoverPage.catCardText).toHaveText("A jak je husťácký!")
+    await pages.hoverPage.unicornCard.hover();
+    await expect(pages.hoverPage.unicornCardText).toHaveText("A jak je husťácký!")
   });
 
 

@@ -18,7 +18,7 @@ export class ModalPage {
     this.modalWindow = page.locator(".modal-content")
     this.buttonSkryj = page.getByRole('button',{name: 'Skryj tajemství o jednorožci'})
     this.cross = page.locator(".close")
-    this.greyMask = page.locator(".modal-dialog")
+    this.greyMask = page.locator(".modal-backdrop")
   }
 
   async visit() {
