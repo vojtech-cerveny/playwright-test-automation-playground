@@ -17,11 +17,11 @@ export class CatsPage {
     this.navigationBar = "nav";
     this.header = page.getByRole("heading", { name: "Tlačítka" });
 
-    // OH! Fill this! Check the HTML and fill the selectors. Use whatever selector you want.
+
     this.addCatButton = page.locator("#addItem");
     this.removeCatButton = page.locator("#removeItem");
     this.apocalypseButton = page.locator("#removeAll");
-    this.catCards = page.getByAltText("Kočka");
+    this.catCards = page.locator(".card.cat");
     this.counter = page.locator("#counter");
   }
 

@@ -10,12 +10,10 @@ test.describe("Cats", () => {
     await pages.catsPage.visit();
   });
 
-    //pises kod sem :)
-
 
     test("button pridej kocku add one card with cat", async ({page}) => {
       await pages.catsPage.addCatButton.click();
-     // await expect(pages.catsPage.catCards).toBeVisible()
+      await expect(pages.catsPage.catCards).toBeVisible()
     });
 
     test("button pridej kocku adds more cat cards", async ({page}) => {
@@ -49,7 +47,7 @@ test.describe("Cats", () => {
     test("counter reacts when button Odeber kocku is clicked", async ({page}) => {
       await pages.catsPage.addCatButton.click({clickCount:2});
       await pages.catsPage.removeCatButton.click();
-      await expect(pages.catsPage.counter).toHaveText("1");;
+      await expect(pages.catsPage.counter).toHaveText("1");
     });
 
     test("counter reacts when button Apokalypsa! is clicked", async ({page}) => {
@@ -63,6 +61,25 @@ test.describe("Cats", () => {
       await expect(pages.catsPage.catCards).toHaveCount(20);
     });
 
+    test("button Odeber kočku is active only when at least one cat card is visible", async ({page}) => {
+      await pages.catsPage.addCatButton.click();
+      await expect(pages.catsPage.removeCatButton).not.toHaveClass(/disabled/);
+    });
+
+    test("button Odeber kočku is not active when no cat card is visible", async ({page}) => {
+      await expect(pages.catsPage.catCards).toHaveCount(0);
+      await expect(pages.catsPage.removeCatButton).toHaveClass(/disabled/);
+    });
+
+    test("button Apokalypsa! is active only when at least one cat card is visible", async ({page}) => {
+      await pages.catsPage.addCatButton.click();
+      await expect(pages.catsPage.apocalypseButton).not.toHaveClass(/disabled/);
+    });
+
+    test("button Apokalypsa! is not active when no cat card is visible", async ({page}) => {
+      await expect(pages.catsPage.catCards).toHaveCount(0);
+      await expect(pages.catsPage.apocalypseButton).toHaveClass(/disabled/);
+    });
 
   
 });
