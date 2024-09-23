@@ -19,7 +19,7 @@ export class SelectorsPage {
     this.elementByData = page.getByTestId("selector-by-dataQA");
     this.elementIdZapletka = page.locator("#zapletka");
     this.elementInteresting = page.locator("xpath=//html/body/div/div/div/ol/li[6]/code");
-    this.elementPicture = page.locator('img').first();
+    this.elementPicture = page.locator('img.story-image');
     this.paragraph = page.locator("p");
     this.like = page.getByText("Dej like!");
     this.likeCounter = page.locator("#lvlAwesome");
