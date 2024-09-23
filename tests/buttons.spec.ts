@@ -10,14 +10,11 @@ test.describe("Buttons", () => {
   });
 
 
-  // this works
   test("button ID should be clicked", async () => {
     await pages.buttonPage.buttonById.click({ timeout: 1000 });
     await expect(pages.buttonPage.buttonById).toHaveClass(/btn-success/);
   });
 
-  // ------------------------------ 👀
-  // these tests needs to be fixed - add locator to buttons
   test("button name should be clicked", async () => {
     await pages.buttonPage.buttonByName.click({ timeout: 1000 });
     await expect(pages.buttonPage.buttonByName).toHaveClass(/btn-success/);
