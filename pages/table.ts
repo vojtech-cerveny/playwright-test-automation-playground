@@ -16,10 +16,11 @@ export class TablePage {
 
     this.table = page.getByRole("table")
     this.tableRows = page.locator('[scope="row"]')
-    this.awesomnessLVLunicorn = page.locator("body > div > table > tbody > tr:nth-child(7) > td:nth-child(3)")
-    this.awesomnessLVLorangutan = page.locator("body > div > table > tbody > tr:nth-child(3) > td:nth-child(3)")
-    this.softnessOfTheFoxFur = page.locator("body > div > table > tbody > tr:nth-child(5) > td:nth-child(5)") 
-    this.whaleSize = page.locator("body > div > table > tbody > tr:nth-child(4) > td:nth-child(4)")
+    this.awesomnessLVLunicorn = page.getByText("Jednorožec").locator("..").locator('td[data-table="lvl-awesomeness"]')
+    //this.awesomnessLVLunicorn = page.locator("body > div > table > tbody > tr:nth-child(7) > td:nth-child(3)")
+    this.awesomnessLVLorangutan = page.getByText("Orangutan").locator("..").locator('td[data-table="lvl-awesomeness"]')
+    this.softnessOfTheFoxFur = page.getByText("Liška").locator("..").locator('td[data-table="softness"]') 
+    this.whaleSize = page.getByText("Velryba").locator("..").locator('td[data-table="size"]')
   }
 
   async visit() {
