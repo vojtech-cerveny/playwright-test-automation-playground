@@ -12,31 +12,25 @@ test.describe("Selectors", () => {
         await pages.selectorsPage.visit();
     });
 
-    /*test("click on fox picture", async ({ page }) => {
-    await pages.findFoxPage.foxpicturebutton.
-    click({timeout:30000});
-    await expect(pages.findFoxPage.textBelowImage).toHaveText("Gratuluji! Tvůj úkol je splněn! Vychutnej si ohňostroj s 🦊")
-    });
-  */
 
     test("find data-qa element", async ({ page }) => {
         await pages.selectorsPage.elementByData;
-        await expect(pages.selectorsPage.elementByData).toBeVisible
+        await expect(pages.selectorsPage.elementByData).toBeVisible();
     });
 
     test("find id zapletka element", async ({ page }) => {
         await pages.selectorsPage.elementIdZapletka;
-        await expect(pages.selectorsPage.elementIdZapletka).toBeVisible
+        await expect(pages.selectorsPage.elementIdZapletka).toBeVisible();
     });
 
     test("find elements with this-is-interesting-paragraph class", async ({ page }) => {
         await pages.selectorsPage.elementInteresting;
-        await expect(pages.selectorsPage.elementInteresting).toBeVisible
+        await expect(pages.selectorsPage.elementInteresting).toBeVisible();
     });
 
     test("find picture elements", async ({ page }) => {
         await pages.selectorsPage.elementPicture;
-        await expect(pages.selectorsPage.elementPicture).toBeVisible
+        await expect(pages.selectorsPage.elementPicture).toBeVisible();
     });
 
     test("count paragraphs", async ({ page }) => {
