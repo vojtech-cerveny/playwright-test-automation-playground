@@ -17,12 +17,14 @@ test.describe("Table", () => {
 
 
     test("Verifying that Orangutan Awesomeness LVL is between 30-40", async ({ page }) => {
-        expect(parseInt(await pages.tablePage.awesomnessLVLorangutan.textContent())).toBeGreaterThanOrEqual(30);
-        expect(parseInt(await pages.tablePage.awesomnessLVLorangutan.textContent())).toBeLessThanOrEqual(40)
+        expect(parseInt((await pages.tablePage.awesomnessLVLorangutan.textContent())!)).toBeGreaterThanOrEqual(30);
+        expect(parseInt((await pages.tablePage.awesomnessLVLorangutan.textContent())!)).toBeLessThanOrEqual(40)
     });
 
     test("Verifying that the softness of the fox fur is between 40-50", async ({ page }) => {
+          //@ts-ignore
           expect(parseInt(await pages.tablePage.softnessOfTheFoxFur.textContent())).toBeGreaterThanOrEqual(40);
+          //@ts-ignore
           expect(parseInt(await pages.tablePage.softnessOfTheFoxFur.textContent())).toBeLessThanOrEqual(50)
       });
     
